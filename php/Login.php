@@ -1,3 +1,13 @@
+<?php
+$con = mysqli_connect("localhost","root",null,"fireworks_business");
+
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+?> 
+
 <html>
 <head>
 <title> Login Form </title>
