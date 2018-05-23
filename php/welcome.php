@@ -67,6 +67,19 @@
           background-color: #555;
           color: white;
       }
+      .button {
+            background-color: #000009; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+      }
+      html {
+          background: rgba(25, 25, 25, 0.7);
+      }
     </style>
    </head>
    
@@ -85,7 +98,7 @@
         <li><a class="hor" href="#contact">Contact</a></li>
         <li><a class="hor" href="#about">About</a></li>
       </ul>
-      <h2><a href = "Login.php">Sign Out</a></h2>
+      <h2><a href = "Login.php" class="button">Sign Out</a></h2>
 	  
 
 	  <!--   Core JS Files   -->
