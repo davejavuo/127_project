@@ -1,6 +1,9 @@
 <?php
    include('session.php');
-?>
+            ?>
+
+
+
 <html">
    
    <head>
@@ -13,6 +16,8 @@
     <title>
         Welcome!
     </title>
+
+    
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
@@ -56,6 +61,23 @@
   </div>
 </nav>
       <h1>Welcome <?php echo $login_session; ?></h1> 
+     <h2>inventory</h2>
+    <?php
+
+            $mysql = "SELECT * FROM products";
+             $result = $link->query($mysql);
+
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while($row = $result->fetch_assoc()) {
+                echo "Product ID: " . $row["product_Id"]. " Product Name: " . $row["prod_name"]. "Product Description: " . $row["prod_desc"]. "<br>";
+            }
+        } else {
+            echo "0 results";
+        }
+
+  ?>
+      
       <h2><a href = "logout.php">Sign Out</a></h2>
 	  
 
