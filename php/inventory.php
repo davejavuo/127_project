@@ -1,6 +1,9 @@
 <?php
    include('session.php');
-?>
+            ?>
+
+
+
 <html">
    
    <head>
@@ -10,6 +13,7 @@
     <title>
         Welcome!
     </title>
+<<<<<<< HEAD
     <style>
       ul {
           list-style-type: none;
@@ -61,6 +65,9 @@
           color: white;
       }
     </style>
+=======
+
+>>>>>>> origin/master
    </head>
    
    <body>
@@ -70,7 +77,23 @@
         <li class="hori"><a href="#contact">Contact</a></li>
         <li class="hori"><a href="#about">About</a></li>
       </ul>
-      <h1>Welcome <?php echo $login_session; ?></h1>
+<<<<<<< HEAD
+      <h1>Welcome <?php echo $login_session; ?></h1> 
+      <h2>inventory</h2>
+      <?php
+
+            $mysql = "SELECT * FROM products";
+             $result = $link->query($mysql);
+
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while($row = $result->fetch_assoc()) {
+                echo "Product ID: " . $row["product_Id"]. " Product Name: " . $row["prod_name"]. "Product Description: " . $row["prod_desc"]. "<br>";
+            }
+        } else {
+            echo "0 results";
+        }
+      ?>
       <table id="customers">
         <tr>
           <th>One</th>
@@ -94,12 +117,9 @@
           <td>Mexico</td>
         </tr>
       </table>
-
-
-      <h2><a href = "Login.php">Sign Out</a></h2>
-    
-
-    <!--   Core JS Files   -->
+      <h2><a href = "logout.php">Sign Out</a></h2>
+	  
+>>>>>>> origin/master
    </body>
    
 </html>
