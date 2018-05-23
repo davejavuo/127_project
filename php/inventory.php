@@ -7,75 +7,99 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="../assets/img/kit/free/apple-icon.png">
-    <link rel="icon" href="../assets/img/kit/free/favicon.png">
     <title>
         Welcome!
     </title>
-    <!--     Fonts and icons     -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="../assets/css/material-kit.css?v=2.0.2">
-    <!-- Documentation extras -->
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="../assets/assets-for-demo/demo.css" rel="stylesheet" />
-    <!-- iframe removal -->
+    <style>
+      ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+      }
+
+      .hori {
+          float: left;
+      }
+
+      li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+      }
+
+      li a:hover {
+          background-color: #111;
+      }
+      .active {
+        background-color: #4CAF50;
+      }
+
+      #customers {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      #customers td, #customers th {
+          border: 1px solid #ddd;
+          padding: 8px;
+      }
+
+      #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+      #customers tr:hover {background-color: #ddd;}
+
+      #customers th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: #4CAF50;
+          color: white;
+      }
+    </style>
    </head>
    
    <body>
-   	<nav class="navbar navbar-expand-lg navbar-light bg-primary">
-  	<div class="container">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown link
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
+      <ul>
+        <li class="hori"><a class="active" href="#home">Home</a></li>
+        <li class="hori"><a href="#news">News</a></li>
+        <li class="hori"><a href="#contact">Contact</a></li>
+        <li class="hori"><a href="#about">About</a></li>
       </ul>
-    </div>
-  </div>
-</nav>
-      <h1>Welcome <?php echo $login_session; ?></h1> 
-      <h2><a href = "logout.php">Sign Out</a></h2>
-	  
+      <h1>Welcome <?php echo $login_session; ?></h1>
+      <table id="customers">
+        <tr>
+          <th>One</th>
+          <th>Two</th>
+          <th>Three</th>
+          <th>Four</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>Berglunds snabbköp</td>
+          <td>Christina Berglund</td>
+          <td>Sweden</td>
+        </tr>
+        <tr>
+          <td>Centro comercial Moctezuma</td>
+          <td>Francisco Chang</td>
+          <td>Mexico</td>
+        </tr>
+      </table>
 
-	  <!--   Core JS Files   -->
-	<script src="/assets/js/core/jquery.min.js"></script>
-	<script src="/assets/js/core/popper.min.js"></script>
-	<script src="/assets/js/bootstrap-material-design.js"></script>
 
-	<!-- Plugin for Date Time Picker and Full Calendar Plugin-->
-	<script src="/assets/js/plugins/moment.min.js"></script>
-	  
+      <h2><a href = "Login.php">Sign Out</a></h2>
+    
 
-	<!-- Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
-	<script src="/assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
-
-	<!-- Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-	<script src="/assets/js/plugins/nouislider.min.js"></script>
-
-	<!-- Material Kit Core initialisations of plugins and Bootstrap Material Design Library -->
-	<script src="/assets/js/material-kit.js?v=2.0.0"></script>
+    <!--   Core JS Files   -->
    </body>
    
 </html>

@@ -7,80 +7,88 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="../assets/img/kit/free/apple-icon.png">
-    <link rel="icon" href="../assets/img/kit/free/favicon.png">
     <title>
         Welcome!
     </title>
-    <!--     Fonts and icons     -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="../assets/css/material-kit.css?v=2.0.2">
-    <!-- Documentation extras -->
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="../assets/assets-for-demo/demo.css" rel="stylesheet" />
-    <!-- iframe removal -->
+    <style>
+      ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+      }
+
+      .hori {
+          float: left;
+      }
+
+      li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+      }
+
+      li a:hover {
+          background-color: #111;
+      }
+      .active {
+        background-color: #4CAF50;
+      }
+
+      .horizontal {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        background-color: #f1f1f1;
+        border: 1px solid #555;
+      }
+
+      .hor {
+          display: block;
+          color: #000;
+          padding: 8px 16px;
+          text-decoration: none;
+      }
+
+      .hor {
+          text-align: center;
+          border-bottom: 1px solid #555;
+      }
+
+      li:last-child {
+          border-bottom: none;
+      }
+
+      .hor:hover:not(.active) {
+          background-color: #555;
+          color: white;
+      }
+    </style>
    </head>
    
    <body>
-   	<nav class="navbar navbar-expand-lg navbar-light bg-primary">
-  	<div class="container">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown link
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
+   	  <ul>
+        <li class="hori"><a class="active" href="#home">Home</a></li>
+        <li class="hori"><a href="#news">News</a></li>
+        <li class="hori"><a href="#contact">Contact</a></li>
+        <li class="hori"><a href="#about">About</a></li>
       </ul>
-    </div>
-  </div>
-</nav>
-      <h1>Welcome <?php echo $login_session; ?></h1> 
-      <button type="button" class="btn btn-primary">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMenu&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button><br>
-      <button type="button" class="btn btn-primary">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspInventory&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button><br>
-      <button type="button" class="btn btn-primary">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSell Product&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button><br>
-      <button type="button" class="btn btn-primary">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHistory&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button><br>
-      <button type="button" class="btn btn-primary">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPrimary&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button><br>
+      <h1>Welcome <?php echo $login_session; ?></h1>
+
+      <ul class="horizontal">
+        <li><a class="hor" href="inventory.php">Inventory</a></li>
+        <li><a class="hor" href="#news">News</a></li>
+        <li><a class="hor" href="#contact">Contact</a></li>
+        <li><a class="hor" href="#about">About</a></li>
+      </ul>
       <h2><a href = "Login.php">Sign Out</a></h2>
 	  
 
 	  <!--   Core JS Files   -->
-	<script src="/assets/js/core/jquery.min.js"></script>
-	<script src="/assets/js/core/popper.min.js"></script>
-	<script src="/assets/js/bootstrap-material-design.js"></script>
-
-	<!-- Plugin for Date Time Picker and Full Calendar Plugin-->
-	<script src="/assets/js/plugins/moment.min.js"></script>
-	  
-
-	<!-- Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
-	<script src="/assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
-
-	<!-- Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-	<script src="/assets/js/plugins/nouislider.min.js"></script>
-
-	<!-- Material Kit Core initialisations of plugins and Bootstrap Material Design Library -->
-	<script src="/assets/js/material-kit.js?v=2.0.0"></script>
    </body>
    
 </html>
