@@ -56,12 +56,7 @@
   </div>
 </nav>
       <h1>Welcome <?php echo $login_session; ?></h1> 
-      <button type="button" class="btn btn-primary">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMenu&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button><br>
-      <button type="button" class="btn btn-primary">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspInventory&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button><br>
-      <button type="button" class="btn btn-primary">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSell Product&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button><br>
-      <button type="button" class="btn btn-primary">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHistory&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button><br>
-      <button type="button" class="btn btn-primary">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPrimary&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button><br>
-      <h2><a href = "Login.php">Sign Out</a></h2>
+      <h2><a href = "logout.php">Sign Out</a></h2>
 	  
 
 	  <!--   Core JS Files   -->
