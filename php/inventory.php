@@ -1,6 +1,6 @@
 <?php
    include('session.php');
-            ?>
+?>
 
 
 
@@ -13,8 +13,15 @@
     <title>
         Welcome!
     </title>
-<<<<<<< HEAD
     <style>
+      .tab { 
+        margin-left: 10px;
+      }
+      .city {
+        background-color: tomato;
+        color: white;
+        padding: 10px;
+      }
       ul {
           list-style-type: none;
           margin: 0;
@@ -65,9 +72,6 @@
           color: white;
       }
     </style>
-=======
-
->>>>>>> origin/master
    </head>
    
    <body>
@@ -77,49 +81,35 @@
         <li class="hori"><a href="#contact">Contact</a></li>
         <li class="hori"><a href="#about">About</a></li>
       </ul>
-<<<<<<< HEAD
-      <h1>Welcome <?php echo $login_session; ?></h1> 
-      <h2>inventory</h2>
-      <?php
-
-            $mysql = "SELECT * FROM products";
-             $result = $link->query($mysql);
-
-        if ($result->num_rows > 0) {
-            // output data of each row
-            while($row = $result->fetch_assoc()) {
-                echo "Product ID: " . $row["product_Id"]. " Product Name: " . $row["prod_name"]. "Product Description: " . $row["prod_desc"]. "<br>";
-            }
-        } else {
-            echo "0 results";
-        }
-      ?>
+      <h1>Welcome, <?php echo $login_session; ?>!</h1> 
+      <h2 class="tab">Inventory</h2>
       <table id="customers">
         <tr>
-          <th>One</th>
-          <th>Two</th>
-          <th>Three</th>
-          <th>Four</th>
+          <th>ProductID</th>
+          <th>Product Name</th>
+          <th>Product Description</th>
+          <th>Quantity</th>
         </tr>
-        <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-        </tr>
-        <tr>
-          <td>Berglunds snabbköp</td>
-          <td>Christina Berglund</td>
-          <td>Sweden</td>
-        </tr>
-        <tr>
-          <td>Centro comercial Moctezuma</td>
-          <td>Francisco Chang</td>
-          <td>Mexico</td>
-        </tr>
-      </table>
+        <?php 
+          $mysql = "SELECT * FROM products";
+             $result = $link->query($mysql);
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while($row = $result->fetch_assoc()) {?>
+          <tr>
+            <td><?php echo $row["product_Id"]; ?></td>
+            <td><?php echo $row["prod_name"]; ?></td>
+            <td><?php echo $row["prod_desc"]; ?></td>
+            <td></td>
+            <td><input type="submit" name="edit" id="edit" value="Edit" /></td>
+          </tr>
+        <?php }
+          } else {
+              echo "0 results";
+          } 
+        ?>
+        </table>
       <h2><a href = "logout.php">Sign Out</a></h2>
-	  
->>>>>>> origin/master
    </body>
    
 </html>
